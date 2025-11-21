@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mission Briefing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            background: black url('../pictures/background-removebg-preview.png') repeat;
+            background-size: 300px;
+            color: #00FF41;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #00FF41;
+            padding-bottom: 1rem;
+        }
+
+        .persona-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px dashed #00FF41;
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .persona-photo {
+            width: 200px;
+            height: 200px;
+            background-color: #111;
+            border: 2px solid #00FF41;
+            margin: 0 auto 1rem auto;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .persona-info {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .persona-info p {
+            margin: 0.5rem 0;
+            gap: 1rem;
+        }
+
+        .mission {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 2px dotted #00FF41;
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .party-info {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00FF41;
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        button {
+            background-color: transparent;
+            border: 2px solid #00FF41;
+            color: #00FF41;
+            padding: 0.75rem 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #00FF41;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<h1>ACCESS GRANTED</h1>
+
+<div class="persona-card">
+    <div id="photo" class="persona-photo"></div>
+    <h2 id="personaName">Name</h2>
+    <p id="role">Titel</p>
+
+    <div class="persona-info">
+        <p><strong>Nationalität:</strong> <span id="nationality"></span></p>
+        <p><strong>Berufung:</strong> <span id="occupation"></span></p>
+        <p><strong>Hintergrund:</strong> <span id="background"></span></p>
+        <p><strong>Fähigkeiten:</strong> <span id="skills"></span></p>
+    </div>
+
+    <div class="mission">
+        <strong>Rolle im Orden:</strong>
+        <p id="missionText"></p>
+    </div>
+
+    <button onclick="downloadDossier()">Download Mission Dossier</button>
+</div>
+
+<div class="party-info">
+    <h2>🎭 Gathering of the Order of Twelve 🎭</h2>
+    <p><strong>Date & Time:</strong> Dez 12, 2025, 18:00</p>
+    <p><strong>Location:</strong> <span id="location"></span></p>
+    <p><strong>Dress Code:</strong> Dress according to your persona / cover - Elite Gala Attire </p>
+    <p><strong>Instructions:</strong> Maintain cover story at all times. Blend in. No real identities revealed.</p>
+</div>
+
+<script src="persona.js"></script>
+</body>
+</html>
