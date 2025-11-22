@@ -7,7 +7,7 @@ const credentials = {
     "sushi": "brille",
     "tamtam": "keigoal",
     "limbo": "schwertkampf",
-    "jovin": "blutgrätsche",
+    "yoshi": "blutgrätsche",
     "dominic": "suntigHeiGah",
     "tabasco": "bowling",
 };
